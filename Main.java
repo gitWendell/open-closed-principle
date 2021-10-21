@@ -1,14 +1,19 @@
 import java.io.*;
+import java.util.Scanner;
 
 public class Main extends SimpleCalculator {
-   private double number_one = 15.20;
-   private double number_two = 55.15;
-   private double result = 0.00;
-   
+
    public static void main(String[] args) {
-      Addition testing = new Addition(15.00, 25.00);
+      Scanner input = new Scanner(System.in);
       SimpleCalculator calculator = new SimpleCalculator();
+      
+      System.out.print("Enter number: ");
+      double number_one = input.nextDouble();
+      
+      System.out.print("Enter number: ");
+      double number_two = input.nextDouble();
+      
+      Addition testing = new Addition(number_one, number_two);
       calculator.calculate(testing);
    }
-
 }
